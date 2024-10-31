@@ -1,145 +1,169 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+'use client'
 
-export default function Example() {
+import { useState } from 'react'
+import { Popover, PopoverButton, PopoverPanel, Disclosure } from '@headlessui/react'
+import { ChevronDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
+import { motion } from 'framer-motion'
+import clsx from 'clsx'
+
+const menuItems = [
+  {
+    name: 'Commercial Banking',
+    items: [
+      { name: 'Deposit Accounts', href: '#', description: 'Explore our range of deposit accounts, including checking and money market options, and find the right fit for your business.' },
+      { name: 'Treasury Management', href: '#', description: 'Utilize our treasury management services, such as online banking, bill pay, and remote deposits, to streamline your finances.' },
+      { name: 'Account Services', href: '#', description: 'Manage your business finances effectively with check reordering, credit card options, and other account services.' },
+    ],
+  },
+  {
+    name: 'Private Banking',
+    items: [
+      { name: 'Deposit Accounts', href: '#', description: 'Open a private checking or money market account with tailored requirements and competitive rates.' },
+      { name: 'Online Services', href: '#', description: 'Access our secure online banking, bill pay, and mobile banking solutions anytime, anywhere.' },
+      { name: 'Account Services', href: '#', description: 'Order checks, monitor your debit card, and utilize other convenient account services.' },
+    ],
+  },
+  {
+    name: 'Personal Banking',
+    items: [
+      { name: 'Deposit Accounts', href: '#', description: 'Choose from our selection of checking, savings, and money market accounts, all with straightforward terms and requirements.' },
+      { name: 'Online Services', href: '#', description: 'Enjoy the convenience of online and mobile banking, with features like bill pay and eStatements.' },
+      { name: 'Account Services', href: '#', description: 'Stay on top of your finances with check reordering, debit card monitoring, and other valuable services.' },
+    ],
+  },
+  {
+    name: 'Lending Services',
+    items: [
+      { name: 'Personal Lending', href: '#', description: 'Apply for a mortgage loan or a personal credit card tailored to your individual financial needs.' },
+      { name: 'Business Lending', href: '#', description: 'Support your business growth with small business loans and business credit card options.' },
+    ],
+  },
+  {
+    name: 'Credit Card Services',
+    items: [
+      { name: 'Commercial Purchasing Card', href: '#', description: 'Optimize your purchasing with our commercial purchasing card solutions.' },
+      { name: 'Business Credit Card', href: '#', description: 'Leverage credit card solutions designed specifically for business expenses.' },
+      { name: 'Personal Credit Card', href: '#', description: 'Select a personal credit card that suits your lifestyle and spending habits.' },
+      { name: 'Merchant Services', href: '#', description: 'Enhance your payment processing with our merchant services, designed for seamless transactions.' },
+      { name: 'Credit Card Privacy Notice', href: '#', description: 'Review our commitment to protecting your credit card information.' },
+    ],
+  },
+  {
+    name: 'Correspondent Banking',
+    items: [
+      { name: 'Correspondent Services', href: '#', description: 'Access correspondent services, including settlement solutions and Servis1st Access.' },
+      { name: 'Helpful Info', href: '#', description: 'Learn more about us through our history, locations, testimonials, and ways to connect.' },
+    ],
+  },
+  {
+    name: 'About Us',
+    items: [
+      { name: 'About Us', href: '#', description: 'Get to know ServisFirst Bank, our values, and our mission to serve you better.' },
+      { name: 'Our History', href: '#', description: 'Discover our history and how we have grown to serve our community.' },
+      { name: 'News', href: '#', description: 'Stay informed with the latest news from ServisFirst Bank.' },
+      { name: 'Locations', href: '#', description: 'Find a ServisFirst Bank location near you for all your banking needs.' },
+      { name: 'Contact Us', href: '#', description: 'Reach out to our team for assistance or with any questions.' },
+    ],
+  },
+  // Other categories (e.g., Private Banking, Personal Banking, Lending Services, etc.) follow here
+
+]
+
+export default function NewNavbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <Disclosure as="nav" className="bg-light-100 shadow">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button */}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
-            </DisclosureButton>
-          </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <img
-                alt="ServisFirst Bank"
-                src="/SFB/logo.svg" // Update with actual logo path
-                className="h-8 w-auto"
-              />
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {/* Navigation Links */}
-              <a href="#" className="inline-flex items-center border-b-2 border-primary-500 px-1 pt-1 text-sm font-medium text-gray-900">
-                Commercial Banking
-              </a>
-              <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
-                Private Banking
-              </a>
-              <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
-                Personal Banking
-              </a>
-              <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
-                Lending Services
-              </a>
-              <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
-                Credit Card Services
-              </a>
-              <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
-                About Us
-              </a>
-            </div>
-          </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-              type="button"
-              className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="h-6 w-6" />
-            </button>
+    <nav className="bg-white shadow">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src="/SFB/logo.svg" alt="ServisFirst Bank Logo" className="h-8 w-auto ml-4" />
+        </div>
 
-            {/* Profile dropdown */}
-            <Menu as="div" className="relative ml-3">
-              <div>
-                <MenuButton className="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">Open user menu</span>
-                  <img
-                    alt="User avatar"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    className="h-8 w-8 rounded-full"
-                  />
-                </MenuButton>
-              </div>
-              <MenuItems
-                transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
-              >
-                <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Your Profile
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Settings
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Sign out
-                  </a>
-                </MenuItem>
-              </MenuItems>
-            </Menu>
-          </div>
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex lg:space-x-8">
+          {menuItems.map((menu) => (
+            <Popover className="relative" key={menu.name}>
+              {({ open }) => (
+                <>
+                  <PopoverButton className="inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-blue-600">
+                    {menu.name}
+                    <ChevronDownIcon className="h-5 w-5" />
+                  </PopoverButton>
+                  <PopoverPanel
+                    as={motion.div}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: open ? 1 : 0, y: open ? 0 : -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-1/2 z-10 mt-2 w-80 -translate-x-1/2 rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5"
+                  >
+                    <div className="p-4">
+                      {menu.items.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                        >
+                          {item.name}
+                          <p className="text-xs text-gray-500">{item.description}</p>
+                        </a>
+                      ))}
+                    </div>
+                  </PopoverPanel>
+                </>
+              )}
+            </Popover>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-gray-500 hover:text-gray-700 focus:outline-none"
+          >
+            {mobileMenuOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
+            )}
+          </button>
         </div>
       </div>
 
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 pb-4 pt-2">
-          {/* Mobile Navigation Links */}
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block border-l-4 border-primary-500 bg-primary-50 py-2 pl-3 pr-4 text-base font-medium text-primary-700"
-          >
-            Commercial Banking
-          </DisclosureButton>
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >
-            Private Banking
-          </DisclosureButton>
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >
-            Personal Banking
-          </DisclosureButton>
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >
-            Lending Services
-          </DisclosureButton>
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >
-            Credit Card Services
-          </DisclosureButton>
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >
-            About Us
-          </DisclosureButton>
-        </div>
-      </DisclosurePanel>
-    </Disclosure>
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <Disclosure as="div" className="lg:hidden bg-white shadow-md">
+          <div className="px-4 pb-4 pt-2 space-y-2">
+            {menuItems.map((menu) => (
+              <Disclosure key={menu.name}>
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className="flex w-full justify-between items-center px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">
+                      {menu.name}
+                      <ChevronDownIcon
+                        className={clsx('h-5 w-5 transform', { 'rotate-180': open })}
+                      />
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="space-y-1">
+                      {menu.items.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="block px-6 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                        >
+                          {item.name}
+                          <p className="text-xs text-gray-500">{item.description}</p>
+                        </a>
+                      ))}
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
+            ))}
+          </div>
+        </Disclosure>
+      )}
+    </nav>
   )
 }

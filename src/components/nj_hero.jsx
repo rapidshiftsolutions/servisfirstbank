@@ -4,19 +4,16 @@ export default function Example() {
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-              <h2 className="text-4xl font-serif font-semibold tracking-tight text-primary-900 sm:text-5xl">Our Commitment to You</h2>
+              <h2 className="text-2xl font-serif font-semibold tracking-tight text-primary-900 md:text-4xl">Our Name is <b className="font-black text-primary-500">Our Mission</b>.</h2>
               <p className="mt-6 text-xl leading-8 text-accent-700">
                 At ServisFirst Bank, we believe that banking is about relationships. We are dedicated to helping you achieve financial success through reliable, innovative, and relationship-driven banking solutions.
-              </p>
-              <p className="mt-6 text-base leading-7 text-accent-700">
-                With a focus on trust and integrity, our team strives to deliver an exceptional banking experience, offering a range of services tailored to your unique needs. From commercial banking to personal finance solutions, we are here to support your goals every step of the way.
               </p>
               <div className="mt-10 flex">
                 <a
                   href="#"
                   className="rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                 >
-                  Join our team <span aria-hidden="true">&rarr;</span>
+                  Let's Get Started <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>

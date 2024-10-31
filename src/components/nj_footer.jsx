@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="flex items-center justify-center xl:col-span-1">
             <img
               alt="ServisFirst Bank Logo"
-              src="/SFB/logo.svg" // Update with the actual logo path
+              src="/SFB/logo-reversed.svg" // Update with the actual logo path
               className="h-16"
             />
           </div>
