@@ -12,9 +12,8 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
-      <Hero />
       <main>
- 
+      <Hero />
       </main>
       <Footer />
     </div>
