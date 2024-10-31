@@ -86,7 +86,7 @@ export default function NewNavbar() {
             <Popover className="relative" key={menu.name}>
               {({ open }) => (
                 <>
-                  <PopoverButton className="inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-blue-600">
+                  <PopoverButton className="inline-flex items-center gap-1 text-xs font-medium text-gray-900 hover:text-blue-600">
                     {menu.name}
                     <ChevronDownIcon className="h-5 w-5" />
                   </PopoverButton>

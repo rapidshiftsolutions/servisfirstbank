@@ -1,12 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/blog/feed.xml/route": "app/blog/feed.xml/route.js",
-  "/blog/[slug]/page": "app/blog/[slug]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/login/page": "app/login/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/page": "app/page.js",
-  "/company/page": "app/company/page.js",
-  "/pricing/page": "app/pricing/page.js",
-  "/studio/[[...tool]]/page": "app/studio/[[...tool]]/page.js"
+  "/page": "app/page.js"
 }
