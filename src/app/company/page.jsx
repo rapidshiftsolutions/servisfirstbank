@@ -1,9 +1,9 @@
 import { AnimatedNumber } from '@/components/animated-number'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/nj_footer'
 import { GradientBackground } from '@/components/gradient'
-import { Navbar } from '@/components/navbar'
+import { Navbar } from '@/components/nj_navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 
 export const metadata = {

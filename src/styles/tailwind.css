@@ -2,28 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font-face declarations */
 @font-face {
-  font-family: 'SFB';
-  src: url('/public/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Unna';
+  src: url('/fonts/Unna-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-:root {
-  --font-sans: 'SFB', system-ui, sans-serif;
-  --font-serif: 'SFB', Georgia, serif;
-  --font-mono: 'SFB', Menlo, monospace;
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+/* Root variables for font families */
+:root {
+  --font-sans: 'IBMPlexSans', system-ui, sans-serif;
+  --font-serif: 'Unna', Georgia, serif;
+}
+
+/* Layer to apply font families to specific elements */
 @layer base {
+  /* Apply IBM Plex Sans to the body */
   body {
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4, h5, h6, p, span, a, div, li, button, input, textarea {
-    font-family: 'SFB', system-ui, sans-serif;
+
+  /* Apply Unna font to headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+
+  /* Apply IBM Plex Sans to all other text elements */
+  p, span, a, div, li, button, input, textarea {
+    font-family: var(--font-sans);
   }
 }
 
+/* Sample keyframe animation */
 @keyframes move-x {
   0% {
     transform: translateX(var(--move-x-from));

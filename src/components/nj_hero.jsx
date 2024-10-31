@@ -1,52 +1,59 @@
 export default function Example() {
     return (
-      <div className="relative bg-white">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-48 lg:pt-40 xl:col-span-6">
-            <div className="mx-auto max-w-lg lg:mx-0">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-11"
-              />
-              <div className="hidden sm:mt-32 sm:flex lg:mt-16">
-                <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  Anim aute id magna aliqua ad ad non deserunt sunt.{' '}
-                  <a href="#" className="whitespace-nowrap font-semibold text-indigo-600">
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-              </div>
-              <h1 className="mt-24 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:mt-10 sm:text-7xl">
-                Data to enrich your business
-              </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat.
+      <div className="overflow-hidden bg-light-50 py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+            <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+              <h2 className="text-4xl font-serif font-semibold tracking-tight text-primary-900 sm:text-5xl">Our Commitment to You</h2>
+              <p className="mt-6 text-xl leading-8 text-accent-700">
+                At ServisFirst Bank, we believe that banking is about relationships. We are dedicated to helping you achieve financial success through reliable, innovative, and relationship-driven banking solutions.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
+              <p className="mt-6 text-base leading-7 text-accent-700">
+                With a focus on trust and integrity, our team strives to deliver an exceptional banking experience, offering a range of services tailored to your unique needs. From commercial banking to personal finance solutions, we are here to support your goals every step of the way.
+              </p>
+              <div className="mt-10 flex">
                 <a
                   href="#"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                 >
-                  Get started
-                </a>
-                <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                  Learn more <span aria-hidden="true">→</span>
+                  Join our team <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>
-          </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-            <img
-              alt=""
-              src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
-              className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-            />
+            <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+              <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+                <img
+                  alt="Team member at ServisFirst Bank"
+                  src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                  className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-accent-100 object-cover"
+                />
+              </div>
+              <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+                <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
+                  <img
+                    alt="Team meeting at ServisFirst Bank"
+                    src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-accent-100 object-cover"
+                  />
+                </div>
+                <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                  <img
+                    alt="ServisFirst Bank office"
+                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                    className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-accent-100 object-cover"
+                  />
+                </div>
+                <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                  <img
+                    alt="ServisFirst Bank team members"
+                    src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-accent-100 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     )
   }
-  
