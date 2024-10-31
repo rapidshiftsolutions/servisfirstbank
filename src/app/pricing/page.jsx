@@ -1,10 +1,10 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import { Footer } from '@/components/nj_footer'
+import Footer from '@/components/nj_footer'
 import { Gradient, GradientBackground } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Navbar } from '@/components/nj_navbar'
+import Navbar from '@/components/nj_navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {

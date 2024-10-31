@@ -11,7 +11,6 @@ import { LogoTimeline } from '@/components/logo-timeline'
 import { Map } from '@/components/map'
 import  Navbar  from '@/components/nj_navbar'
 import { Screenshot } from '@/components/screenshot'
-import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
 
 export const metadata = {
