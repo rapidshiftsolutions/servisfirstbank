@@ -2,8 +2,8 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s - ServisFirst Bank',
+    default: 'ServisFirst Bank  - Our name is our mission.',
   },
 }
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="The Radiant Blog"
+          title="The ServisFirst Bank Blog"
           href="/blog/feed.xml"
         />
       </head>

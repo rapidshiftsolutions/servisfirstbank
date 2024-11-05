@@ -276,7 +276,7 @@ export default function NewNavbar() {
               href="#"
               className="flex items-center rounded bg-white px-3 py-1 text-black font-black hover:bg-accent-50"
             >
-              <span className="mr-1">🔒</span> Login
+            Login
             </a>
           </div>
         </div>
