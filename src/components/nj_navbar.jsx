@@ -1,5 +1,9 @@
 'use client'
 
+
+import { PhoneIcon, EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/solid';
+
+
 import {
   Disclosure,
   Popover,
@@ -10,8 +14,6 @@ import {
   Bars3Icon,
   ChevronDownIcon,
   XMarkIcon,
-  PhoneIcon,
-  EnvelopeIcon,
 } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
@@ -261,23 +263,29 @@ export default function NewNavbar() {
             />
           </div>
 
-          {/* Contact and Call Icons for Mobile */}
           <div className="flex space-x-3 md:hidden">
-            <a
-              href="tel:+18663170810"
-              className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
-              title="Call Us"
-            >
-              <PhoneIcon className="h-6 w-6" />
-            </a>
-            <a
-              href="/contact"
-              className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
-              title="Contact Form"
-            >
-              <EnvelopeIcon className="h-6 w-6" />
-            </a>
-          </div>
+      <a
+        href="tel:+18663170810"
+        className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
+        title="Call Us"
+      >
+        <PhoneIcon className="h-6 w-6" />
+      </a>
+      <a
+        href="/contact"
+        className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
+        title="Contact Form"
+      >
+        <EnvelopeIcon className="h-6 w-6" />
+      </a>
+      <a
+        href="https://secure.servisfirstbank.com/login"
+        className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
+        title="Login"
+      >
+        <LockClosedIcon className="h-6 w-6" />
+      </a>
+    </div>
 
           <div className="hidden items-center space-x-6 text-sm text-white lg:flex">
             <span>{dateTime}</span>
