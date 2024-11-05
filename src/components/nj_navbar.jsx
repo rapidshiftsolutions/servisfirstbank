@@ -10,6 +10,8 @@ import {
   Bars3Icon,
   ChevronDownIcon,
   XMarkIcon,
+  PhoneIcon,
+  EnvelopeIcon,
 } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
@@ -232,8 +234,7 @@ const menuItems = [
         icon: FingerPrintIcon,
       },
     ],
-  },
-  // ... add other categories here
+  }
 ]
 
 export default function NewNavbar() {
@@ -259,6 +260,25 @@ export default function NewNavbar() {
               className="ml-4 h-8 w-auto"
             />
           </div>
+
+          {/* Contact and Call Icons for Mobile */}
+          <div className="flex space-x-3 md:hidden">
+            <a
+              href="tel:+18663170810"
+              className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
+              title="Call Us"
+            >
+              <PhoneIcon className="h-6 w-6" />
+            </a>
+            <a
+              href="/contact"
+              className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
+              title="Contact Form"
+            >
+              <EnvelopeIcon className="h-6 w-6" />
+            </a>
+          </div>
+
           <div className="hidden items-center space-x-6 text-sm text-white lg:flex">
             <span>{dateTime}</span>
             <span>NYSE: SFBS</span>
@@ -273,10 +293,10 @@ export default function NewNavbar() {
               Investor Relations
             </a>
             <a
-              href="#"
+              href="https://secure.servisfirstbank.com/login"
               className="flex items-center rounded bg-white px-3 py-1 text-black font-black hover:bg-accent-50"
             >
-            Login
+              Login
             </a>
           </div>
         </div>
@@ -308,7 +328,6 @@ export default function NewNavbar() {
                             className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
                           >
                             <div className="flex items-start gap-3">
-                              {/* Apply fixed width and height to icons */}
                               <div>
                                 <p>{item.name}</p>
                                 <p className="text-xs text-gray-500">

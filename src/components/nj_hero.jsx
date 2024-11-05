@@ -5,7 +5,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <section
-      className="relative flex items-center h-screen md:h-[600px] bg-cover bg-center"
+      className="relative flex items-center h-[700px] md:h-[600px] bg-cover bg-center"
       style={{
         backgroundImage: "url('/SFB/marketing/pexels-jopwell-2422286.webp')",
       }}

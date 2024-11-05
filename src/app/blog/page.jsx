@@ -276,15 +276,16 @@ export default async function Blog({ searchParams }) {
   return (
     <main className="overflow-hidden">
       <GradientBackground />
+      <Navbar />
       <Container>
-        <Navbar />
+        
         <Subheading className="mt-16">Blog</Subheading>
         <Heading as="h1" className="mt-2">
           What’s happening at ServisFirst Bank.
         </Heading>
         <Lead className="mt-6 max-w-3xl">
           Stay informed with product updates, company news, and insights on how
-          to sell smarter at your company.
+          to bank smarter.
         </Lead>
       </Container>
       {page === 1 && !category && <FeaturedPosts />}

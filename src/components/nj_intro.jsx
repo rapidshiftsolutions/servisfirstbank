@@ -1,6 +1,6 @@
 export default function Example() {
     return (
-      <div className="overflow-hidden bg-light-50 py-32 z-auto">
+      <div className="overflow-hidden bg-light-50 py-16 md:py-32 z-auto">
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
@@ -10,14 +10,14 @@ export default function Example() {
               </p>
               <div className="mt-10 flex">
                 <a
-                  href="#"
+                  href="/contact"
                   className="rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                 >
                   Let's Get Started <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>
-            <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+            <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents -mb-96 md:-mb-0">
               <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                 <img
                   alt="Team member at ServisFirst Bank"
