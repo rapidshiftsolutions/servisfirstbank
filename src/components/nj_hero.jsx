@@ -13,9 +13,9 @@ const Hero = () => {
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="relative z-10 px-6 md:pl-16 text-left max-w-lg md:max-w-none w-full md:w-1/2">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          Times Change, Modern Banking Solutions Will Help.
+      <div className="relative z-10 px-6 md:pl-16 text-left max-w-lg md:max-w-none w-full md:w-1/3">
+        <h1 className="text-4xl md:text-6xl font-md text-white mb-4">
+          <b>Business Banking,</b> Tailored for Growth.
         </h1>
         <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
           
