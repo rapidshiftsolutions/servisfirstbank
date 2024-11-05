@@ -50,18 +50,6 @@ const StickyButtons = () => {
         </span>
       </div>
       <div className="group relative">
-        <a
-          href="mailto:support@yourcompany.com"
-          className="w-12 h-12 bg-blue-600 text-white rounded-md shadow-lg hover:scale-105 hover:shadow-xl transition transform duration-200 flex items-center justify-center"
-          title="Email us"
-        >
-          <EnvelopeIcon className="h-6 w-6" />
-        </a>
-        <span className="absolute right-14 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-600 text-white px-2 py-1 rounded-md shadow-lg">
-          Email
-        </span>
-      </div>
-      <div className="group relative">
         <button
           onClick={toggleCallOptions}
           className="w-12 h-12 bg-blue-600 text-white rounded-md shadow-lg hover:scale-105 hover:shadow-xl transition transform duration-200 flex items-center justify-center"

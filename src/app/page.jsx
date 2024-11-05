@@ -1,5 +1,6 @@
 import Footer from '@/components/nj_footer'
 import Hero from '@/components/nj_hero'
+import Intro from '@/components/nj_intro'
 import Navbar from '@/components/nj_navbar'
 import QuickNav from '@/components/nj_quicknav'
 
@@ -14,7 +15,8 @@ export default function Home() {
       <Navbar />
       <QuickNav />
       <main>
-        <Hero />
+      <Hero />
+        <Intro />
       </main>
       <Footer />
     </div>
