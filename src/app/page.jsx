@@ -4,6 +4,7 @@ import Intro from '@/components/nj_intro'
 import Navbar from '@/components/nj_navbar'
 import QuickNav from '@/components/nj_quicknav'
 import BankServices from '@/components/nj_services'
+import Contact from '@/components/nj_contact'
 
 export const metadata = {
   description:
@@ -16,9 +17,10 @@ export default function Home() {
       <Navbar />
       <QuickNav />
       <main>
-      <Hero />
+        <Hero />
         <Intro />
         <BankServices />
+        <Contact />
       </main>
       <Footer />
     </div>

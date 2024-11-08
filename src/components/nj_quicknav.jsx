@@ -35,45 +35,45 @@ const StickyButtons = () => {
     <div className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 transform flex-col gap-3 md:flex">
       <div className="group relative">
         <button
-          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-blue-600 text-white shadow-lg transition duration-200 hover:scale-105 hover:shadow-xl"
+          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-primary-600 text-white shadow-md shadow-accent-900 transition duration-200 hover:scale-105 hover:shadow-md"
           onClick={increaseFontSize}
           title="Increase font size"
         >
           <PlusIcon className="h-6 w-6" />
         </button>
-        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-blue-600 px-2 py-1 text-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-primary-600 px-2 py-1 text-white opacity-0 shadow-md shadow-accent-900 transition-opacity duration-300 group-hover:opacity-100">
           Larger
         </span>
       </div>
       <div className="group relative">
         <button
-          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-blue-600 text-white shadow-lg transition duration-200 hover:scale-105 hover:shadow-xl"
+          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-primary-600 text-white shadow-md shadow-accent-900 transition duration-200 hover:scale-105 hover:shadow-md"
           onClick={resetFontSize}
           title="Reset font size"
         >
           <MinusIcon className="h-6 w-6" />
         </button>
-        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-blue-600 px-2 py-1 text-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-primary-600 px-2 py-1 text-white opacity-0 shadow-md shadow-accent-900 transition-opacity duration-300 group-hover:opacity-100">
           Smaller
         </span>
       </div>
       <div className="group relative">
         <button
           onClick={toggleCallOptions}
-          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-blue-600 text-white shadow-lg transition duration-200 hover:scale-105 hover:shadow-xl"
+          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-primary-600 text-white shadow-md shadow-accent-900 transition duration-200 hover:scale-105 hover:shadow-md"
           title="Call us"
         >
           <PhoneIcon className="h-6 w-6" />
         </button>
-        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-blue-600 px-2 py-1 text-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-primary-600 px-2 py-1 text-white opacity-0 shadow-md shadow-accent-900 transition-opacity duration-300 group-hover:opacity-100">
           Call
         </span>
         {showCallOptions && (
-          <div className="absolute -left-[280px] -top-2 w-64 rounded-lg bg-blue-600 p-4 text-white shadow-lg">
+          <div className="absolute -left-[280px] -top-2 w-64 rounded-lg bg-primary-600 p-4 text-white shadow-md shadow-accent-900">
             <h3 className="mb-2 text-lg font-semibold">Questions?</h3>
             <p className="text-sm">We are here to help you!</p>
             <Link href="/contact">
-              <button className="mt-2 w-full rounded-md bg-blue-700 py-2 font-semibold text-white hover:bg-blue-800">
+              <button className="mt-2 w-full rounded-md bg-primary-400 py-2 font-semibold text-white hover:bg-primary-600">
                 Contact Us
               </button>
             </Link>
@@ -103,12 +103,12 @@ const StickyButtons = () => {
       <div className="group relative">
         <a
           href="https://secure.servisfirstbank.com/login"
-          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-blue-600 text-white shadow-lg transition duration-200 hover:scale-105 hover:shadow-xl"
+          className="flex h-12 w-12 transform items-center justify-center rounded-md bg-primary-600 text-white shadow-md shadow-accent-900 transition duration-200 hover:scale-105 hover:shadow-md"
           title="Login"
         >
           <LockClosedIcon className="h-6 w-6" />
         </a>
-        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-blue-600 px-2 py-1 text-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+        <span className="absolute right-14 top-1/2 -translate-y-1/2 transform rounded-md bg-primary-600 px-2 py-1 text-white opacity-0 shadow-md shadow-accent-900 transition-opacity duration-300 group-hover:opacity-100">
           Login
         </span>
       </div>

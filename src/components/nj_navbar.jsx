@@ -1,20 +1,13 @@
 'use client'
 
-
-import { PhoneIcon, EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/solid';
-
-
+import { PhoneIcon, EnvelopeIcon, LockClosedIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import {
   Disclosure,
   Popover,
   PopoverButton,
   PopoverPanel,
 } from '@headlessui/react'
-import {
-  Bars3Icon,
-  ChevronDownIcon,
-  XMarkIcon,
-} from '@heroicons/react/20/solid'
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
   ChartPieIcon,
@@ -179,34 +172,8 @@ const menuItems = [
     ],
   },
   {
-    name: 'Correspondent Banking',
-    items: [
-      {
-        name: 'Correspondent Services',
-        href: '#',
-        description:
-          'Access correspondent services, including settlement solutions and Servis1st Access.',
-        icon: ArrowPathIcon,
-      },
-      {
-        name: 'Helpful Info',
-        href: '#',
-        description:
-          'Learn more about us through our history, locations, testimonials, and ways to connect.',
-        icon: DocumentChartBarIcon,
-      },
-    ],
-  },
-  {
     name: 'About Us',
     items: [
-      {
-        name: 'About Us',
-        href: '#',
-        description:
-          'Get to know ServisFirst Bank, our values, and our mission to serve you better.',
-        icon: ChartPieIcon,
-      },
       {
         name: 'Our History',
         href: '#',
@@ -226,14 +193,14 @@ const menuItems = [
         href: '#',
         description:
           'Find a ServisFirst Bank location near you for all your banking needs.',
-        icon: ArrowPathIcon,
+        icon: MapPinIcon,
       },
       {
         name: 'Contact Us',
-        href: '#',
+        href: '/contact',
         description:
           'Reach out to our team for assistance or with any questions.',
-        icon: FingerPrintIcon,
+        icon: EnvelopeIcon,
       },
     ],
   }
@@ -263,54 +230,21 @@ export default function NewNavbar() {
             />
           </div>
 
-          <div className="flex space-x-3 md:hidden">
-      <a
-        href="tel:+18663170810"
-        className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
-        title="Call Us"
-      >
-        <PhoneIcon className="h-6 w-6" />
-      </a>
-      <a
-        href="/contact"
-        className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
-        title="Contact Form"
-      >
-        <EnvelopeIcon className="h-6 w-6" />
-      </a>
-      <a
-        href="https://secure.servisfirstbank.com/login"
-        className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full"
-        title="Login"
-      >
-        <LockClosedIcon className="h-6 w-6" />
-      </a>
-    </div>
-
-          <div className="hidden items-center space-x-6 text-sm text-white lg:flex">
-            <span>{dateTime}</span>
-            <span>NYSE: SFBS</span>
-            <span>866.317.0810</span>
-            <a href="#" className="hover:text-primary-50">
-              Locations
+          <div className="hidden md:flex space-x-3">
+            <a href="tel:+18663170810" className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full" title="Call Us">
+              <PhoneIcon className="h-5 w-5" />
             </a>
-            <a href="#" className="hover:text-primary-50">
-              Contact
+            <a href="/contact" className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full" title="Contact Form">
+              <EnvelopeIcon className="h-5 w-5" />
             </a>
-            <a href="#" className="hover:text-primary-50">
-              Investor Relations
-            </a>
-            <a
-              href="https://secure.servisfirstbank.com/login"
-              className="flex items-center rounded bg-white px-3 py-1 text-black font-black hover:bg-accent-50"
-            >
-              Login
+            <a href="https://secure.servisfirstbank.com/login" className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full" title="Login">
+              <LockClosedIcon className="h-5 w-5" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="relative z-40 bg-gray-100 shadow-sm">
+      <div className="sticky top-0 z-40 bg-gray-100 shadow-sm">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="hidden justify-center py-2 lg:flex lg:space-x-8">
             {menuItems.map((menu) => (
@@ -330,17 +264,11 @@ export default function NewNavbar() {
                     >
                       <div className="p-4">
                         {menu.items.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
-                          >
+                          <a key={item.name} href={item.href} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
                             <div className="flex items-start gap-3">
                               <div>
                                 <p>{item.name}</p>
-                                <p className="text-xs text-gray-500">
-                                  {item.description}
-                                </p>
+                                <p className="text-xs text-gray-500">{item.description}</p>
                               </div>
                             </div>
                           </a>
@@ -353,57 +281,54 @@ export default function NewNavbar() {
             ))}
           </div>
         </div>
-      </div>
+        </div>
 
-      {mobileMenuOpen && (
-        <Disclosure as="div" className="bg-white shadow-md lg:hidden">
-          <div className="space-y-2 px-4 pb-4 pt-2">
-            {menuItems.map((menu) => (
-              <Disclosure key={menu.name}>
-                {({ open }) => (
-                  <>
-                    <Disclosure.Button className="flex w-full items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
-                      {menu.name}
-                      <ChevronDownIcon
-                        className={clsx('h-5 w-5 transform', {
-                          'rotate-180': open,
-                        })}
-                      />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className="space-y-1">
-                      {menu.items.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="block px-6 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                        >
-                          <div className="flex items-center gap-3">
-                            <item.icon className="h-5 w-5 text-gray-600" />
-                            <span>{item.name}</span>
-                          </div>
-                        </a>
-                      ))}
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
-            ))}
-          </div>
-        </Disclosure>
-      )}
-
-      <div className="flex items-center justify-end px-4 py-2 lg:hidden">
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="text-gray-500 hover:text-gray-700 focus:outline-none"
-        >
-          {mobileMenuOpen ? (
-            <XMarkIcon className="h-6 w-6" />
-          ) : (
-            <Bars3Icon className="h-6 w-6" />
+{mobileMenuOpen && (
+  <Disclosure as="div" className="bg-white shadow-md lg:hidden">
+    <div className="space-y-2 px-4 pb-4 pt-2">
+      {menuItems.map((menu) => (
+        <Disclosure key={menu.name}>
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="flex w-full items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
+                {menu.name}
+                <ChevronDownIcon
+                  className={clsx('h-5 w-5 transform', {
+                    'rotate-180': open,
+                  })}
+                />
+              </Disclosure.Button>
+              <Disclosure.Panel className="space-y-1">
+                {menu.items.map((item) => (
+                  <a key={item.name} href={item.href} className="block px-6 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    <div className="flex items-center gap-3">
+                      <item.icon className="h-5 w-5 text-gray-600" />
+                      <span>{item.name}</span>
+                    </div>
+                  </a>
+                ))}
+              </Disclosure.Panel>
+            </>
           )}
-        </button>
-      </div>
-    </>
-  )
+        </Disclosure>
+      ))}
+    </div>
+  </Disclosure>
+)}
+
+<div className="flex items-center justify-end px-4 py-2 lg:hidden">
+  <button
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    className="text-gray-500 hover:text-gray-700 focus:outline-none"
+  >
+    {mobileMenuOpen ? (
+      <XMarkIcon className="h-6 w-6" />
+    ) : (
+      <Bars3Icon className="h-6 w-6" />
+    )}
+  </button>
+</div>
+</>
+)
 }
+
